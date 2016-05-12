@@ -1,0 +1,10 @@
+<h1><%=@user.username%>'s blog </h1>
+<% if @user == current_user %>
+	<ul>
+		<li>edit profile</li>
+		<li><a href="/users/<%=@user.id%>/entries/new">new post</a></li>
+	</ul>
+<% end %>
+
+<%=erb :'entries/index'%>
+

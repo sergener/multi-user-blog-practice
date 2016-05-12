@@ -18,6 +18,17 @@
   <title></title>
 </head>
 <body>
+    <ul>
+    <% if logged_in? %>
+      <li>Welcome to the site, <%= current_user.username %></li>
+      <li><a href="/logout">Logout</a></li>
+    <% else %>
+      <li>Welcome to the blog site!</li>
+      <li><a href="/users/new">Sign up</a></li>
+      <li><a href="/login">Login</a></li>
+    <% end %>
+      <li><a href="/">home</a></li>
+  </ul>
   <%= yield %>
 </body>
 </html>

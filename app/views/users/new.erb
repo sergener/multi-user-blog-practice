@@ -1,0 +1,7 @@
+
+<form method="post" action="/users">
+	Username:<input name="user[username]" type="text" value="<%= @user.try(:username) %>" placeholder="username">
+	Email:<input name="user[email]" type="text" value="<%= @user.try(:email) %>" placeholder="email">
+	Password:<input name="user[password]" type="password" value="<%= @user.try(:password) %>" placeholder="password">
+	<input type="submit" value="Create!">
+</form>

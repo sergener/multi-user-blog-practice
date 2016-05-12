@@ -1,0 +1,9 @@
+<h3>New blog post</h3>
+
+	<form method="post" action="/users/<%= @user.id %>/entries" method="Post">
+	<input type="hidden" name="entry[user_id]" value="<%= @user.id %>">
+  
+	Title:<input name="entry[title]" type="text" value="<%= @entry.try(:title) %>" placeholder="title">
+	Body:<input name="entry[body]" type="text" value="<%= @entry.try(:body) %>" placeholder="body">
+	<input type="submit" value="Post!">
+</form>
